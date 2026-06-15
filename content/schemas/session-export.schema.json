@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/maia2-spatial-frame-session-export.schema.json",
+  "title": "MAIA-2 Spatial Frame Questionnaire Session Export",
+  "type": "object",
+  "required": [
+    "sessionId",
+    "participant",
+    "language",
+    "blocks",
+    "assetVersions",
+    "timestamps"
+  ],
+  "properties": {
+    "sessionId": { "type": "string", "minLength": 1 },
+    "appVersion": { "type": "string" },
+    "contentVersion": { "type": "string" },
+    "language": {
+      "type": "object",
+      "required": ["code", "label"],
+      "properties": {
+        "code": { "enum": ["en", "de"] },
+        "label": { "type": "string" }
+      }
+    },
+    "participant": {
+      "type": "object",
+      "required": ["participantId", "name", "age", "gender", "handedness", "consent", "signature"],
+      "properties": {
+        "participantId": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "age": { "type": "integer", "minimum": 0, "maximum": 120 },
+        "gender": {
+          "enum": ["female", "male", "non_binary_or_diverse", "prefer_not_to_say"]
+        },
+        "handedness": {
+          "enum": ["left", "right", "ambidextrous", "prefer_not_to_say"]
+        },
+        "consent": { "const": true },
+        "signature": {
+          "type": "object",
+          "required": ["format", "storedPathOrInlineData", "capturedAt"],
+          "properties": {
+            "format": { "enum": ["svg", "png", "raw_points_json"] },
+            "storedPathOrInlineData": { "type": "string", "minLength": 1 },
+            "capturedAt": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["blockId", "ordinal", "startedAt", "completedAt", "responses"],
+        "properties": {
+          "blockId": { "type": "string" },
+          "ordinal": { "type": "integer", "minimum": 1 },
+          "startedAt": { "type": "string", "format": "date-time" },
+          "completedAt": { "type": "string", "format": "date-time" },
+          "responses": { "type": "object" },
+          "scores": { "type": "object" }
+        }
+      }
+    },
+    "assetVersions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string" }
+        }
+      }
+    },
+    "timestamps": {
+      "type": "object",
+      "required": ["createdAt", "completedAt"],
+      "properties": {
+        "createdAt": { "type": "string", "format": "date-time" },
+        "completedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+/.idea/
+/.vscode/
+/tmp/
+/exports/
+/participant-data/
+*.log
+Thumbs.db
+Desktop.ini

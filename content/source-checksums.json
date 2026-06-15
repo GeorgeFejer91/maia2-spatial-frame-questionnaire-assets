@@ -1,0 +1,15 @@
+{
+  "generatedDate": "2026-06-15",
+  "files": [
+    {
+      "path": "assets/pictographs/spatial-frame-reference-continuum.png",
+      "sha256": "4D5AA60F1475DC2E75BB859CC6890D7E3A42F7EF41C5BDE2C4CF22B30693E5C3",
+      "source": "D:/GithubVR/MyQuestionnaireVR/Assets/StreamingAssets/PictographicScales/2.SpatialFrameReferenceContinuum.png"
+    },
+    {
+      "path": "references/MAIA2_German_Eggart-2021_S1.pdf",
+      "sha256": "82AFF8E53874DCD100CD3F7EF20FF1114BD1D835445E593130AD37F20FE16725",
+      "source": "https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0253913.s001&type=supplementary"
+    }
+  ]
+}
