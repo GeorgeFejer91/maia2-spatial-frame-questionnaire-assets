@@ -56,6 +56,10 @@ The selected language is stored once and reused for all blocks. Block 2 and Bloc
 - `docs/`: build brief, instrument documentation, provenance, and citations.
 - `references/`: source PDFs that can be redistributed or locally archived when available.
 
+## MesmerPrism Lineage
+
+The spatial-frame pictograph lineage comes from the MesmerPrism/Viscereality questionnaire materials. The asset bundled here was copied from the local `MyQuestionnaireVR` rebuild, which preserved the `MesmerPrism/Viscereality` source trail documented in `docs/source-provenance.md`.
+
 ## German MAIA-2 Source Decision
 
 The German MAIA-2 content is pinned to the validated 37-item German MAIA-2 published as the S1 questionnaire for Eggart, Todd, and Valdes-Stauber (2021). The official UCSF MAIA page also lists German as a systematic forward-backward translation and points to the MAIA source material. A targeted check on 2026-06-15 found newer MAIA-2 papers still citing Eggart et al. as the German MAIA-2 validation rather than replacing it.

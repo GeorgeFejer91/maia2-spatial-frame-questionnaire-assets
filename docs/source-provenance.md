@@ -10,6 +10,15 @@ D:/GithubVR/MyQuestionnaireVR/Assets/StreamingAssets/PictographicScales/2.Spatia
 
 This was the only pictographic asset requested for the new three-block program.
 
+The local rebuild traces these questionnaire materials back to:
+
+```text
+MesmerPrism/Viscereality
+source commit: 7f0f7c9a40885aa841892b9a680acf45fa45b2d7
+```
+
+That lineage is recorded in the source `MyQuestionnaireVR/docs/SOURCE_ARTIFACTS.md` file used during this handoff.
+
 ## MAIA-2
 
 English MAIA-2 item text follows the official UCSF MAIA-2 2018 source document. German MAIA-2 item text follows the validated German 37-item MAIA-2 from Eggart, Todd, and Valdes-Stauber (2021), also available from UCSF as `MAIA-2_German.pdf`.
